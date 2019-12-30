@@ -33,7 +33,7 @@ dependencies {
 
 ### # jcenter에서 원격으로 다운받는 경우
 
-* <span style="color:#e11d21">**[수정]**</span> : bintray > jcenter 업로드 후에 가이드 추가.
+* ㅡ
 
 
 ## 2-2. 종속 라이브러리 선언
@@ -123,7 +123,7 @@ meta-data 중복으로 빌드가 정상적으로 진행되지 않을 수 있습�
 </manifest>
 ```
 
-맞춤쿠폰 목록 화면으로 진입하기위해 반드시 위 Activity를 선언해야 합니다.
+맞춤쿠폰 캠페인 화면으로 진입하기위해 반드시 위 Activity를 선언해야 합니다.
 
 <br>
 
@@ -160,7 +160,7 @@ private void requestBadgeType() {
         }
 
         @Override
-        public void onFail() {
+        public void onFail(Stirng message) {
         }
     });
 }
