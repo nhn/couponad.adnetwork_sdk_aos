@@ -1,19 +1,24 @@
-package com.nhnent.adplatform.adnetwork.couponadsample;
+package com.nhn.couponad.sample;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.nhnent.adplatform.adnetwork.base.AdNetwork;
-import com.nhnent.adplatform.adnetwork.coupon.AdNetworkActivity;
+import com.nhn.couponad.base.AdNetwork;
+import com.nhn.couponad.coupon.EntryType;
+import com.nhn.couponad.sample.terms.TermsFlowTestActivity;
+import com.nhnent.adplatform.adnetwork.couponadsample.R;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
 
-    private Button btnTest;
+    private Button btnGoCampaign;
+    private Button btnTermsAgreementProcess;
     private TextView txtBadgeType;
 
     @Override
@@ -23,20 +28,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initView();
+
         requestBadgeType();
     }
 
     private void initView() {
-        btnTest = findViewById(R.id.btn_test);
-        btnTest.setOnClickListener(new View.OnClickListener() {
+        txtBadgeType = findViewById(R.id.txt_badge_type);
+        btnGoCampaign = findViewById(R.id.btn_go_campaign);
+        btnTermsAgreementProcess = findViewById(R.id.btn_terms_agreement_process);
+
+        btnGoCampaign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AdNetworkActivity.class);
+                Intent intent = AdNetwork.createIntentForAdNetworkHome(MainActivity.this, EntryType.NORMAL);
                 startActivity(intent);
             }
         });
 
-        txtBadgeType = findViewById(R.id.txt_badge_type);
+        btnTermsAgreementProcess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TermsFlowTestActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     /**
@@ -56,8 +71,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFail() {
+            public void onFail(String message) {
                 txtBadgeType.setVisibility(View.GONE);
+                Log.d(TAG, "requestBadgeType() | onFail(). message = " + message);
             }
         });
     }

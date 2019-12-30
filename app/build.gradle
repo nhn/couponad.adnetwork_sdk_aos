@@ -24,7 +24,8 @@ repositories {
 }
 
 dependencies {
-    implementation name: 'adnetwork-1.0', ext: 'aar'
+    implementation name: 'adnetwork-release-v1.0.1', ext: 'aar'
+
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.google.android.gms:play-services-base:16.1.0'
     implementation 'com.google.android.gms:play-services-ads:17.2.0'

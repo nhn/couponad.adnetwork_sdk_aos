@@ -1,8 +1,9 @@
-package com.nhnent.adplatform.adnetwork.couponadsample;
+package com.nhn.couponad.sample;
 
 import android.app.Application;
 
-import com.nhnent.adplatform.adnetwork.base.AdNetwork;
+import com.nhn.couponad.base.AdNetwork;
+
 
 public class CouponAdSampleApplication extends Application {
 

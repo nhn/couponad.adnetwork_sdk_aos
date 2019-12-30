@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name=".CouponAdSampleApplication"
+        android:name="com.nhn.couponad.sample.CouponAdSampleApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -17,7 +17,7 @@
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.nhn.couponad.sample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -25,8 +25,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.nhn.couponad.sample.terms.TermsFlowTestActivity" />
+
         <activity
-            android:name="com.nhnent.adplatform.adnetwork.coupon.AdNetworkActivity"
+            android:name="com.nhn.couponad.coupon.AdNetworkActivity"
             android:theme="@style/AdNetworkCompat.NoActionBar" />
 
     </application>
