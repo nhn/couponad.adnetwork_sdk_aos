@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.nhn.couponad.api.json.model.AdNetworkTerms;
-import com.nhnent.adplatform.adnetwork.couponadsample.R;
+import com.nhn.couponad.sample.R;
 
 import java.util.ArrayList;
 import java.util.List;

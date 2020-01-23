@@ -12,7 +12,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-import com.nhnent.adplatform.adnetwork.couponadsample.R;
+import com.nhn.couponad.sample.R;
 
 
 public class AdNetworkTermsDetailDialog extends AlertDialog {

@@ -15,7 +15,7 @@ import com.nhn.couponad.base.AdNetwork;
 import com.nhn.couponad.coupon.EntryType;
 import com.nhn.couponad.coupon.banner.AdNetworkTargetBannerView;
 import com.nhn.couponad.coupon.banner.BannerType;
-import com.nhnent.adplatform.adnetwork.couponadsample.R;
+import com.nhn.couponad.sample.R;
 
 import java.util.List;
 
