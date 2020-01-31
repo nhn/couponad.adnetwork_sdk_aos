@@ -4,6 +4,7 @@
 
 | 버전 | 날짜 | 내용 |
 | --- | --- | --- |
+| v1.0.2 | 2019.12.27 | 광고 개인 최적화 선택 해제(isLimitAdTracking) 옵션 관련 정책 변경 |
 | v1.0.1 | 2019.12.27 | 약관 동의 Flow 추가 |
 | v1.0.0 | 2019.11.29 |  |
 
@@ -29,7 +30,7 @@ allprojects {
 ```gradle
 // app > build.gradle
 dependencies {
-    implementation 'com.nhn.couponad:adnetwork:1.0@aar'
+    implementation 'com.nhn.couponad:adnetwork:1.0.2@aar'
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.google.android.gms:play-services-base:16.1.0'
@@ -53,7 +54,7 @@ repositories {
 }
 
 dependencies {
-    implementation name: 'adnetwork-1.0', ext: 'aar'
+    implementation name: 'adnetwork-1.0.2', ext: 'aar'
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.google.android.gms:play-services-base:16.1.0'
@@ -269,6 +270,10 @@ protected void onResume() {
 
 맞춤쿠폰 캠페인 화면에서 사용자가 언제든지 동의한 약관을 철회할 수 있습니다.
 따라서, 화면이 갱신될 때마다 약관 동의여부를 조회하여 배너 노출상태를 변경할 수 있도록, onResume()에서 약관 동의여부를 매번 조회하도록 합니다.
+
+또한, **[기기 설정 > Google > 광고]** 메뉴에서
+**"광고 개인 최적화 선택 해제(isLimitAdTrackingEnabled)"** 옵션이 On 상태인 경우에는 약관 정보를 조회할 수 없습니다.
+이 경우, 오류메시지와 함께 onFail() 메서드로 콜백됩니다.
 
 
 ## 7-2. 약관 동의 과정
