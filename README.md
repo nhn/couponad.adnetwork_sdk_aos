@@ -4,6 +4,7 @@
 
 | 버전 | 날짜 | 내용 |
 | --- | --- | --- |
+| v1.0.2 | 2019.12.27 | 광고 개인 최적화 선택 해제(isLimitAdTracking) 옵션 관련 정책 변경 |
 | v1.0.1 | 2019.12.27 | 약관 동의 Flow 추가 |
 | v1.0.0 | 2019.11.29 |  |
 
@@ -29,7 +30,7 @@ allprojects {
 ```gradle
 // app > build.gradle
 dependencies {
-    implementation 'com.nhn.couponad:adnetwork:1.0@aar'
+    implementation 'com.nhn.couponad:adnetwork:1.0.2@aar'
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.google.android.gms:play-services-base:16.1.0'
@@ -53,7 +54,7 @@ repositories {
 }
 
 dependencies {
-    implementation name: 'adnetwork-1.0', ext: 'aar'
+    implementation name: 'adnetwork-1.0.2', ext: 'aar'
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.google.android.gms:play-services-base:16.1.0'
