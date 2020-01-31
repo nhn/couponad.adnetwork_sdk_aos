@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.nhn.couponad.base.AdNetwork;
 import com.nhn.couponad.coupon.EntryType;
 import com.nhn.couponad.sample.terms.TermsFlowTestActivity;
-import com.nhnent.adplatform.adnetwork.couponadsample.R;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";

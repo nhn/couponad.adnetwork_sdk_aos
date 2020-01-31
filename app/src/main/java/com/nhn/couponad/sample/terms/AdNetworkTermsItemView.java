@@ -10,7 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.nhn.couponad.api.json.model.AdNetworkTerms;
-import com.nhnent.adplatform.adnetwork.couponadsample.R;
+import com.nhn.couponad.sample.R;
 
 public class AdNetworkTermsItemView extends FrameLayout {
 
