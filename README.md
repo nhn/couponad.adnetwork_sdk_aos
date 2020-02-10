@@ -289,7 +289,7 @@ public class AdNetworkTerms implements Serializable {
 
 위 데이터를 참고하여 약관 동의 화면(or 팝업)을 구현하면 됩니다.
 샘플앱에서는 팝업 형태로 구현되어 있으며, TermsFlowTestActivity와 아래 클래스들을 참고하시면 됩니다.
-* AdNewtworkTermsView : 약관 동의 뷰. '전체동의' 버튼 포함.
+* AdNetworkTermsView : 약관 동의 뷰. '전체동의' 버튼 포함.
 * AdNetworkTermsItemView : 단일 약관 1개를 표현한 뷰.
 * AdNetworkTermsDetailDialog : 약관 상세 내용 보기를 눌렀을때 노출할 다이얼로그.
 
