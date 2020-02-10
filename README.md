@@ -287,7 +287,22 @@ public class AdNetworkTerms implements Serializable {
 }
 ```
 
+```json
+// 예시
+[
+  {
+    "code": "TERMS_PERSONAL_INFORM",
+    "name": "개인정보 수집 및 이용 동의",
+    "url": "https://ad-network.payco.com/views/terms/privacy-policy/no-header"
+  }
+]
+```
+
 위 데이터를 참고하여 약관 동의 화면(or 팝업)을 구현하면 됩니다.
+* code : 약관 동의 API 호출시 전달하는 코드값
+* name : 사용자에게 노출하는 약관 명칭
+* url : 약관 상세 내용 '보기' 버튼을 눌렀을때 연결할 웹페이지 url
+
 샘플앱에서는 팝업 형태로 구현되어 있으며, TermsFlowTestActivity와 아래 클래스들을 참고하시면 됩니다.
 * AdNetworkTermsView : 약관 동의 뷰. '전체동의' 버튼 포함.
 * AdNetworkTermsItemView : 단일 약관 1개를 표현한 뷰.
